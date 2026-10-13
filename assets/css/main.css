@@ -1309,6 +1309,10 @@ body.vt-menu-open .drawer { pointer-events: auto; }
    19. PRICING
    -------------------------------------------------------------------------- */
 .price-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 1.8vw, 1.6rem); align-items: start; }
+.price-grid.price-grid--5 { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; }
+@media (max-width: 1280px) { .price-grid.price-grid--5 { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: none; } }
+@media (max-width: 900px) { .price-grid.price-grid--5 { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: none; } }
+@media (max-width: 620px) { .price-grid.price-grid--5 { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; } }
 .price {
   position: relative;
   padding: clamp(1.6rem, 2.6vw, 2.3rem);
